@@ -7,7 +7,7 @@ const Index = (props) => {
     <>
       <Navbar />
       <div {...props} />
-      {/*<Footer />*/}
+      <Footer />
     </>
   );
 };

@@ -8,7 +8,7 @@ const ActivateCard = () => {
       alignItems="flex-end"
       justify="space-between"
       width={{ base: "100%", md: "290px" }}
-      height="323px"
+      minH={{ base: "202px", md: "323px" }}
       padding="23px 23px 17px 19px"
       box-shadow="0 22px 24px 0 rgba(0, 0, 0, 0.07)"
       border=" solid 1px #dadada"
@@ -33,7 +33,7 @@ const ActivateCard = () => {
           lineHeight="1.5"
           letterSpacing="normal"
           color="#000"
-          mb="22px"
+          mb={{ base: "0", md: "22px" }}
         >
           A tailored registry for talent eager to work for a fast-growing, Greek tech company. Here
           you can connect with top employers from our portfolio as they scale from startups to tech

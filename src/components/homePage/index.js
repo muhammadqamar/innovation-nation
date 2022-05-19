@@ -14,7 +14,7 @@ const Index = () => {
       <ReadAbout />
       <Activate />
       <OutliersPodcast />
-      <SupporterNation />
+      {/*<SupporterNation />*/}
     </Box>
   );
 };

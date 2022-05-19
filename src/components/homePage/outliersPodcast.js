@@ -1,6 +1,8 @@
 import { Container, Box, Flex, Text, Heading, Button, Img, Wrap, WrapItem } from "@chakra-ui/react";
 import OutliersCard from "../../utils/outliersCard";
 
+const data = [{}];
+
 const OutliersPodcast = () => {
   return (
     <Box
