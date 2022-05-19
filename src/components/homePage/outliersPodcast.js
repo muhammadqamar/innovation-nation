@@ -1,7 +1,24 @@
 import { Container, Box, Flex, Text, Heading, Button, Img, Wrap, WrapItem } from "@chakra-ui/react";
 import OutliersCard from "../../utils/outliersCard";
 
-const data = [{}];
+const data = [
+  {
+    title: "Cameo",
+    time: "33:22",
+  },
+  {
+    title: "TileDB",
+    time: "33:22",
+  },
+  {
+    title: "Skroutz",
+    time: "33:22",
+  },
+  {
+    episTitle: "Explore All Episodes",
+    epis: "24 Episodes",
+  },
+];
 
 const OutliersPodcast = () => {
   return (
@@ -61,18 +78,11 @@ const OutliersPodcast = () => {
               spacing={{ base: "16px", xl: "12px" }}
               justify={{ base: "center", md: "inherit" }}
             >
-              <WrapItem>
-                <OutliersCard />
-              </WrapItem>
-              <WrapItem>
-                <OutliersCard />
-              </WrapItem>
-              <WrapItem>
-                <OutliersCard />
-              </WrapItem>
-              <WrapItem>
-                <OutliersCard />
-              </WrapItem>
+              {data.map((item, index) => (
+                <WrapItem key={index}>
+                  <OutliersCard item={item} index={index} />
+                </WrapItem>
+              ))}
             </Wrap>
           </Flex>
         </Container>
