@@ -4,6 +4,7 @@ import StartUp from "./startUp";
 import ReadAbout from "./readAbout";
 import Activate from "./activate";
 import OutliersPodcast from "./outliersPodcast";
+import SupporterNation from "./supporterNation";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <ReadAbout />
       <Activate />
       <OutliersPodcast />
+      <SupporterNation />
     </Box>
   );
 };

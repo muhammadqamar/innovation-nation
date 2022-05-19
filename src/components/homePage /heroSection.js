@@ -10,7 +10,11 @@ const HeroSection = () => {
       bgPosition="center"
       bgSize="cover"
     >
-      <Box w="100%" h="100%" bgColor="rgba(15, 194, 188 , 43%)">
+      <Box
+        w="100%"
+        h="100%"
+        bgImage=" linear-gradient(327deg, rgba(48, 191, 195, 0) 121%, #3fe9ee -13%)"
+      >
         <Container pt="200px" maxW="container.xl" h="100%">
           <Text fontSize="27px" fontWeight="400" letterSpacing="3px">
             JOIN THE
