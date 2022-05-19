@@ -3,10 +3,10 @@ import { Container, Box, Flex, Text, Heading, Button, Img } from "@chakra-ui/rea
 const OutliersCard = () => {
   return (
     <Flex
-      flexDirection="column"
+      flexDirection={{ base: "row", md: "column" }}
       justify="space-between"
-      width="212px"
-      height="176px"
+      w={{ base: "280px", sm: "366px", md: "212px" }}
+      height={{ base: "70px", md: "176px" }}
       padding="18px 16px 18px 18px"
       border="solid 1px #dadada"
       backgroundColor=" #fff"
@@ -31,6 +31,7 @@ const OutliersCard = () => {
           lineHeight="1.5"
           letterSpacing="-0.2px"
           color="#000"
+          mr={{ base: "26px", md: "0" }}
         >
           33:22
         </Heading>

@@ -18,31 +18,39 @@ const HeroSection = () => {
         bgPosition="center"
         bgSize="cover"
       >
-        <Container p="151px 120px 0" maxW="1440px" h="100%">
-          <Box w="576px">
+        <Container
+          p={{ base: "148px 24px 0", md: "151px 60px 0", xl: "151px 120px 0" }}
+          maxW="1440px"
+          h="100%"
+        >
+          <Box w={{ base: "100%", md: "576px" }}>
             <Text
-              fontSize="32px"
+              fontSize={{ base: "24px", md: "32px" }}
               fontWeight="600"
-              lineHeight="2.25"
-              letterSpacing="5px"
+              lineHeight={{ base: "1", md: "2.25" }}
+              letterSpacing={{ base: "3.75px", md: "5px" }}
               color="#fff"
+              mb={{ base: "8px ", md: "0" }}
             >
               Greece’s Tech Hub
             </Text>
             <Heading
-              fontSize="180px"
-              fontWeight="900"
-              lineHeight="0.4"
-              letterSpacing="-25.71px"
+              fontSize={{ base: "100px", md: "180px" }}
+              fontWeight="normal"
+              lineHeight={{ base: "0.72", md: "0.7" }}
+              letterSpacing={{ base: "-14.29px", md: "-25.71px" }}
               color="#faff00"
+              textTransform="uppercase"
+              fontFamily="BurfordRusticBookBlack"
             >
-              innovation <span style={{ color: "#fff" }}>nation</span>
+              innovation <br />
+              <span style={{ color: "#fff", fontFamily: "BurfordRusticBookBlack" }}>nation</span>
             </Heading>
             <Text
               mb="31px"
-              fontSize="16px"
+              fontSize={{ base: "14px", md: "16px" }}
               fontWeight="normal"
-              lineHeight="1.75"
+              lineHeight={{ base: "2", md: "1.75" }}
               letterSpacing="normal"
               color="#fff"
             >

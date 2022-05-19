@@ -18,24 +18,14 @@ import {
 const Footer = () => {
   return (
     <>
-      <Box width="100%" bgColor="#000" minHeight="485px" margin="86px 0 0">
-        <Container
-          maxW="1008px"
-          bg="transparent"
-          color="#fff"
-          centerContent
-          padding="87px 0 42px"
-        >
+      <Box width="100%" bgColor="#000" minHeight="485px">
+        <Container maxW="1008px" bg="transparent" color="#fff" centerContent padding="87px 0 42px">
           <Flex
             justifyContent="space-between"
             marginBottom="72px"
             flexDirection={{ base: "column", md: "row", lg: "row" }}
           >
-            <Box
-              minW={{ base: "100%", lg: "255px" }}
-              fontWeight="900"
-              textTransform="uppercase"
-            >
+            <Box minW={{ base: "100%", lg: "255px" }} fontWeight="900" textTransform="uppercase">
               <Text fontSize="22px">
                 <span style={{ color: "#c3399e", fontWeight: "800" }}>#</span>
                 Innovation_nation
@@ -47,8 +37,7 @@ const Footer = () => {
                 lineHeight="36px"
                 letterSpacing="-5.78px"
               >
-                Sign up to our{" "}
-                <span style={{ color: "#faff00" }}>Newsletter</span>
+                Sign up to our <span style={{ color: "#faff00" }}>Newsletter</span>
               </Heading>
             </Box>
             <FormControl minWidth={{ base: "100%", lg: "530px !important" }}>
@@ -83,14 +72,7 @@ const Footer = () => {
                   minHeight="48px"
                   textTransform="uppercase"
                   fontSize="18px"
-                  rightIcon={
-                    <Image
-                      src="/right_img.svg"
-                      alt="btn_image"
-                      width={27}
-                      height={14}
-                    />
-                  }
+                  rightIcon={<Image src="/right_img.svg" alt="btn_image" width={27} height={14} />}
                 >
                   Sign up
                 </Button>
@@ -105,8 +87,7 @@ const Footer = () => {
                 marginTop="15px"
               >
                 I understand that by submitting this request I agree to the{" "}
-                <Link textDecoration="underline">terms and conditions</Link> of
-                Innovation Nation
+                <Link textDecoration="underline">terms and conditions</Link> of Innovation Nation
               </Checkbox>
             </FormControl>
           </Flex>
@@ -167,12 +148,7 @@ const Footer = () => {
             alignItems="baseline"
           >
             Copyright are weird.2021 Trademark
-            <Image
-              src="/trademark_logo.svg"
-              alt="footer_logo"
-              width={5}
-              height={4}
-            />
+            <Image src="/trademark_logo.svg" alt="footer_logo" width={5} height={4} />
           </Text>
         </Container>
       </Box>

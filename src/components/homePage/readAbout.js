@@ -1,4 +1,4 @@
-import { Container, Box, Flex, Text } from "@chakra-ui/react";
+import { Container, Box, Flex, Text, Wrap, WrapItem } from "@chakra-ui/react";
 
 import Card from "../../utils/aboutCard";
 
@@ -22,17 +22,21 @@ const CardData = [
 
 const ReadAbout = () => {
   return (
-    <Container maxW="1440px" p="0 110px 146px" mb="80px">
-      <Text mb="8px" fontSize="24px" fontWeight=" bold" lineHeight="1.33" letterSpacing="-0.5px">
-        Don’t only read, be read about.
-      </Text>
-      <Box w="342px" h="4px" bgColor="#B83280" mb="32px" />
-      <Flex align="center" justify="space-between">
-        {CardData.map((item, index) => (
-          <Card key={index} data={item} index={index} />
-        ))}
-      </Flex>
-    </Container>
+    <Box w="100%" bgColor="#f4f4f4">
+      <Container maxW="1440px" p={{ base: "0 24px 61px", md: "0 60px 136px", xl: "0 110px 146px" }}>
+        <Text mb="8px" fontSize="24px" fontWeight=" bold" lineHeight="1.33" letterSpacing="-0.5px">
+          Don’t only read, be read about.
+        </Text>
+        <Box w={{ base: "100%", sm: "342px" }} h="4px" bgColor="#B83280" mb="32px" />
+        <Wrap spacing={{ base: "20px", md: "24px" }} justify={{ base: "center", md: "inherit" }}>
+          {CardData.map((item, index) => (
+            <WrapItem key={index}>
+              <Card data={item} index={index} />
+            </WrapItem>
+          ))}
+        </Wrap>
+      </Container>
+    </Box>
   );
 };
 

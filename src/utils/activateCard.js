@@ -7,7 +7,7 @@ const ActivateCard = () => {
       flexDirection="column"
       alignItems="flex-end"
       justify="space-between"
-      width="290px"
+      width={{ base: "100%", md: "290px" }}
       height="323px"
       padding="23px 23px 17px 19px"
       box-shadow="0 22px 24px 0 rgba(0, 0, 0, 0.07)"
@@ -17,12 +17,13 @@ const ActivateCard = () => {
       <Box>
         <Heading
           fontSize="40px"
-          fontWeight=" 900"
+          fontWeight=" normal"
           lineHeight="0.65"
           letterSpacing="-4.55px"
           color="#000"
           mb="17px"
           textTransform="uppercase"
+          fontFamily="BurfordRusticBookBlack"
         >
           ATHENS INNOVATION SUMMIT
         </Heading>
@@ -40,6 +41,7 @@ const ActivateCard = () => {
         </Text>
       </Box>
       <Button
+        display={{ base: "none", md: "block" }}
         fontSize="16px"
         lineHeight="1.5"
         fontWeight="500"

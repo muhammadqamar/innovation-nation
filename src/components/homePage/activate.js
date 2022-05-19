@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Wrap, Heading, Text, WrapItem } from "@chakra-ui/react";
 import ActivateCard from "../../utils/activateCard";
 const Activate = () => {
   return (
@@ -10,28 +10,32 @@ const Activate = () => {
       bgPosition="center"
       bgSize="cover"
     >
-      <Box bgColor="#b4449ac4" w="100%" minH="545px">
-        <Container p="58px 115px 0" maxW="1440px" h="100%" pos="relative">
+      <Box bgColor="#b4449ac4" w="100%" minH="545px" pos="relative">
+        <Container
+          p={{ base: "55px 24px 0", md: "58px 60px 0", xl: "58px 115px 0" }}
+          maxW="1440px"
+          h="100%"
+        >
           <Heading
             fontSize="72px"
-            fontWeight=" 900"
+            fontWeight="normal"
             lineHeight="0.78"
             letterSpacing="-8.18px"
             color="#fff"
-            mb="14px"
-            display="inline-flex"
-            alignItems="flex-end"
+            mb={{ base: "18px", md: "14px" }}
             textTransform="uppercase"
+            fontFamily="BurfordRusticBookBlack"
+            pos="relative"
+            _after={{
+              content: `""`,
+              width: "31px",
+              height: "4px",
+              pos: "absolute",
+              backgroundColor: "#faff00",
+              bottom: "0",
+            }}
           >
             Activate your involvement
-            <Box
-              style={{
-                width: "31px",
-                height: " 4px",
-                backgroundColor: "#faff00",
-                marginLeft: "7px",
-              }}
-            />
           </Heading>
 
           <Text
@@ -48,15 +52,30 @@ const Activate = () => {
             what the objective may be .Transformation in the <br /> Greek ecosystem hit the ground
             running when the network started sharing knowledge and collaborating.
           </Text>
-          <Box pos="absolute" w="100%">
-            <Flex align="center" justify="space-between" maxW="1210px">
+
+          <Wrap
+            m="0 auto"
+            maxW="1210px"
+            justify="center"
+            pos="relative"
+            zIndex="1"
+            spacing={{ base: "18px", xl: "16px" }}
+          >
+            <WrapItem>
               <ActivateCard />
+            </WrapItem>
+            <WrapItem>
               <ActivateCard />
+            </WrapItem>
+            <WrapItem>
               <ActivateCard />
+            </WrapItem>
+            <WrapItem>
               <ActivateCard />
-            </Flex>
-          </Box>
+            </WrapItem>
+          </Wrap>
         </Container>
+        <Box pos="absolute" bottom="0" left="0" w="100%" h="15px" backgroundColor="#faff00" />
       </Box>
     </Box>
   );

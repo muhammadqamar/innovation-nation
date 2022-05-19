@@ -3,10 +3,13 @@ import { Box, Button, Flex, Img, Text } from "@chakra-ui/react";
 const AboutCard = ({ data, index }) => {
   return (
     <Flex
-      flexDirection={index === 0 ? "row" : "column"}
-      w={index === 0 ? "504px " : "334px"}
+      flexDirection={{
+        base: "column",
+        md: `${index === 0 ? "row" : "column"}`,
+      }}
+      w={{ base: "100%", md: `${index === 0 ? "504px " : "334px"}` }}
       h="430px"
-      p={index === 0 ? "8px" : "8px 8px 24px"}
+      p={{ base: "8px 8px 24px", md: `${index === 0 ? "8px" : "8px 8px 24px"}` }}
       border="solid 1px #dadada"
       boxShadow="0 22px 24px 0 rgba(0, 0, 0, 0.07)"
       className="main-box"
@@ -15,9 +18,9 @@ const AboutCard = ({ data, index }) => {
       }}
     >
       <Box
-        w={index === 0 ? "240px" : "100%"}
-        h={index === 0 ? "100%" : "200px"}
-        flexShrink={index === 0 && "0"}
+        w={{ base: "100%", md: `${index === 0 ? "240px" : "100%"}` }}
+        h={{ base: "200px", md: `${index === 0 ? "100%" : "200px"}` }}
+        flexShrink={{ base: "inherit", md: `${index === 0 && "0"}` }}
         bgImage={`url(${data.image})`}
         bgRepeat="no-repeat"
         bgPosition="center"
@@ -41,10 +44,10 @@ const AboutCard = ({ data, index }) => {
               },
             }}
             mb="7px"
-            fontSize={index === 0 ? "24px" : "20px"}
-            lineHeight="1.3"
+            fontSize={{ base: "24px", md: `${index === 0 ? "24px" : "20px"}` }}
+            lineHeight={{ base: "1.33", md: "1.3" }}
             fontWeight="bold"
-            letterSpacing="-0.25px"
+            letterSpacing={{ base: "-0.3px", md: "-0.25px" }}
           >
             {data.title}
           </Text>
