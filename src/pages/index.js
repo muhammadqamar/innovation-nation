@@ -1,9 +1,13 @@
-import Image from "next/image";
+import React from "react";
+import Layout from "../components/layout";
+import SupporterNation from "../components/layout/supporterNation";
 
-export default function Home() {
+const Index = () => {
   return (
-    <div>
-      <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-    </div>
+    <Layout>
+      <SupporterNation />
+    </Layout>
   );
-}
+};
+
+export default Index;
