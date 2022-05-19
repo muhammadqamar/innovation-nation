@@ -13,11 +13,17 @@ const StartUp = () => {
     >
       <Box maxW="800px">
         <Heading mb="16px" fontWeight="bold" fontSize="42px">
-          INNOVATION NATION IS OUR STARTUP SCENE IN GREECE, MOVING TECH FORWARD AND STUFF LIKE THAT_
+          The Greek Tech Industry is a community with common goals, aspirations and state of mind
         </Heading>
+
         <Text mb="16px" fontSize="18px" fontWeight="400">
-          Community of shared tech aspirations. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Why join? The real question is why now.{" "}
+        </Text>
+        <Text mb="16px" fontSize="18px" fontWeight="400">
+          Athens has evolved into a centralized tech hub, made by a community of successful
+          high-impact entrepreneurs. We have found the sweet spot of collaboration between the
+          public and private sectors, with one common goal - fueling leaders and founders to
+          accelerate Greece’s tech scene
         </Text>
         <Button
           rightIcon={<Img src="/arrow-right.svg" w="16px" alt="logo" />}
