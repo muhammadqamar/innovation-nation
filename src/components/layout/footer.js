@@ -24,12 +24,12 @@ const Footer = () => {
           bg="transparent"
           color="#fff"
           centerContent
-          padding="87px 0 42px"
+          padding="87px 24px 42px"
         >
           <Flex
             justifyContent="space-between"
-            marginBottom="72px"
-            flexDirection={{ base: "column", md: "row", lg: "row" }}
+            marginBottom={{ base: "79px", lg: "72px" }}
+            flexDirection={{ base: "column", lg: "row" }}
           >
             <Box
               minW={{ base: "100%", lg: "255px" }}
@@ -61,7 +61,7 @@ const Footer = () => {
               >
                 Your Email
               </FormLabel>
-              <Flex>
+              <Flex flexDirection={{ base: "column", lg: "row" }}>
                 <Input
                   id="email"
                   type="email"
@@ -72,13 +72,14 @@ const Footer = () => {
                   borderRadius="none"
                   color="lightGrey"
                   padding="0 12px !important"
+                  margin={{ base: "0 0 20px", lg: "auto" }}
                 />
                 <Button
                   minWidth="156px"
                   bg="#e1478be8"
                   color="#fff"
                   justifyContent="space-around"
-                  margin="0 0 0 10px"
+                  margin={{ base: "0", lg: "0 0 0 10px" }}
                   borderRadius="none"
                   minHeight="48px"
                   textTransform="uppercase"
@@ -102,7 +103,7 @@ const Footer = () => {
                 maxW="482px"
                 font-size="16px"
                 lineHeight="1.5"
-                marginTop="15px"
+                margin={{ base: "30px 0 79px", lg: "15px 0 0" }}
               >
                 I understand that by submitting this request I agree to the{" "}
                 <Link textDecoration="underline">terms and conditions</Link> of
@@ -110,58 +111,67 @@ const Footer = () => {
               </Checkbox>
             </FormControl>
           </Flex>
-          <Divider maxW="1008px" borderColor="#8d8d8d" />
+          <Divider
+            maxW={{ base: "514px", lg: "1008px" }}
+            borderColor="#8d8d8d"
+          />
           <Flex
             width="100%"
-            margin="43px 0"
-            alignItems="center"
+            margin={{ base: "43px 0 60px", lg: "43px 0" }}
+            alignItems={{ base: "center", lg: "baseline" }}
             justifyContent="space-between"
             flexDirection={{ base: "column", lg: "row" }}
           >
-            <Image
-              src="/footer_logo.svg"
-              alt="footer_logo"
-              width={124}
-              height={18}
-              object-fit="contain"
-              margin={{ base: "10px", lg: "7px 31px 7px 0" }}
-            />
-            <Image
-              src="/footer_logos.jpg"
-              alt="footer_logo"
-              width={70}
-              height={50}
-              margin={{ base: "10px", lg: "0" }}
-            />
+            <Flex alignItems="center">
+              <Image
+                src="/footer_logo.svg"
+                alt="footer_logo"
+                width={124}
+                height={18}
+                object-fit="contain"
+                margin={{ base: "10px", lg: "7px 31px 7px 0" }}
+              />
+              <Image
+                src="/footer_logo.svg"
+                alt="footer_logo"
+                width={124}
+                height={18}
+                margin={{ base: "10px", lg: "0" }}
+              />
+            </Flex>
             <Heading
               fontSize="16px"
               textTransform="uppercase"
               fontWeight="normal"
               lineHeight="1.5"
               letterSpacing="2px"
+              margin={{ base: "50px 0 29px", lg: "" }}
             >
               Under the auspices of
             </Heading>
-            <Image
-              src="/footer_logos.jpg"
-              alt="footer_logo"
-              width={70}
-              height={50}
-              margin={{ base: "10px", lg: "0" }}
-            />
-            <Image
-              src="/footer_logos.jpg"
-              alt="footer_logo"
-              width={70}
-              height={50}
-              margin={{ base: "10px", lg: "0" }}
-            />
+            <Flex alignItems="center">
+              <Image
+                src="/footer_logo.svg"
+                alt="footer_logo"
+                width={124}
+                height={18}
+                margin={{ base: "10px", lg: "0 10" }}
+              />
+              <Image
+                src="/footer_logo.svg"
+                alt="footer_logo"
+                width={124}
+                height={18}
+                margin={{ base: "10px", lg: "0" }}
+              />
+            </Flex>
           </Flex>
           <Text
             fontSize="16px"
             width="100%"
             color="#8d8d8d"
             display="flex"
+            justifyContent={{ base: "center", lg: "" }}
             fontWeight="500"
             lineHeight="1.38"
             alignItems="baseline"

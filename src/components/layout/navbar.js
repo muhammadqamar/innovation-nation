@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Box, Flex, ReachLink, Container, Img } from "@chakra-ui/react";
+import NavModal from "./mobileMenu";
 
 const Header = () => {
   return (
@@ -14,8 +15,11 @@ const Header = () => {
         justifyContent="space-between"
       >
         <Img src="nation-logo.svg" alt="logo" />
+        <Box display={{ base: "block", lg: "none" }}>
+          <NavModal />
+        </Box>
 
-        <Flex>
+        <Flex display={{ base: "none", lg: "inherit" }}>
           <Link href="/home">
             <a
               style={{
